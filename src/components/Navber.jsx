@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link, NavLink } from 'react-router';
 
 const Navber = () => {
     return (
-        <div>
+        <div className="">
             <div className="navbar bg-base-100 shadow-sm">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -11,14 +12,28 @@ const Navber = () => {
                         </div>
 
                     </div>
-                    <a className="btn btn-ghost text-xl">daisyUI</a>
+                    
+                    <Link to="/home" className=''>
+                    
+                    <div className='flex gap-1 items-center'>
+                        <img  src="/src/assets/logo.png" className='w-8' alt="" />  
+                        <span className='text-xl font-bold'>HERO.IO</span>
+
+                    </div>
+                    </Link>
                 </div>
                 <div className="navbar-center hidden lg:flex gap-3">
-                    <button className='btn'>home</button>
-                    <button className='btn'>about</button>
+                   
+                   
+                    <NavLink to="/home" className='btn'>Home</NavLink>
+                    <NavLink to="/apps" className='btn'>Apps</NavLink>
+                    <NavLink to="/installation" className='btn'>Installation</NavLink>
+
                 </div>
                 <div className="navbar-end">
-                    <a className="btn">Button</a>
+                    <button className='btn'>
+                    <NavLink to="/github">Contribute</NavLink>
+                    </button>
                 </div>
             </div>
 
