@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router';
 import githubLogo from "../assets/github.png";
+import Logo from "../assets/logo.png";
 
 
 const Navber = () => {
@@ -57,10 +58,14 @@ const Navber = () => {
 
                     </div>
 
-                    <Link to="/home" className=''>
+                    <Link to="/home" className={({ isActive }) =>
+                    (isActive
+                        ? "text-transparent bg-clip-text bg-gradient-to-r from-[#632ee3] to-[#9f62f2] underline decoration-[#632ee3] underline-offset-5"
+                        : "")
+                    }>
 
                         <div className='flex gap-1 items-center'>
-                            <img src="/src/assets/logo.png" className='w-8' alt="" />
+                            <img src={Logo} className='w-8' alt="" />
                             <span className='text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#632ee3] to-[#9f62f2]'>HERO.IO</span>
 
                         </div>
