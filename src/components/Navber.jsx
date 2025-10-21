@@ -1,7 +1,12 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router';
+import githubLogo from "../assets/github.png";
 
 const Navber = () => {
+
+    const handleClick = () => {
+        window.open("https://github.com/nayeem-94", "_blank"); // change URL to your GitHub
+    };
     return (
         <div className="">
             <div className="navbar bg-base-100 shadow-sm">
@@ -12,27 +17,28 @@ const Navber = () => {
                         </div>
 
                     </div>
-                    
-                    <Link to="/home" className=''>
-                    
-                    <div className='flex gap-1 items-center'>
-                        <img  src="/src/assets/logo.png" className='w-8' alt="" />  
-                        <span className='text-xl font-bold'>HERO.IO</span>
 
-                    </div>
+                    <Link to="/home" className=''>
+
+                        <div className='flex gap-1 items-center'>
+                            <img src="/src/assets/logo.png" className='w-8' alt="" />
+                            <span className='text-xl font-bold'>HERO.IO</span>
+
+                        </div>
                     </Link>
                 </div>
                 <div className="navbar-center hidden lg:flex gap-3">
-                   
-                   
+
+
                     <NavLink to="/home" className='btn'>Home</NavLink>
                     <NavLink to="/apps" className='btn'>Apps</NavLink>
                     <NavLink to="/installation" className='btn'>Installation</NavLink>
 
                 </div>
                 <div className="navbar-end">
-                    <button className='btn'>
-                    <NavLink to="/github">Contribute</NavLink>
+                    <button onClick={handleClick} className='btn'>
+                        <img src={githubLogo} alt="GitHub" className="w-6 h-6" />
+                        Contribute
                     </button>
                 </div>
             </div>
