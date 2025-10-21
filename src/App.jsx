@@ -1,6 +1,7 @@
 import { Outlet } from "react-router";
 import Navber from "./components/navber";
 import Footer from "./components/Footer";
+import PageEror from "./components/Errors Pages/PageEror";
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
         <Outlet>
         </Outlet>
         <Footer> </Footer>
+        {/* <PageEror></PageEror> */}
       </div>
 
 

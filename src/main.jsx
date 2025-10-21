@@ -4,10 +4,12 @@ import App from './App.jsx'
 
 import { createBrowserRouter, href } from "react-router";
 import { RouterProvider } from "react-router/dom";
-import Home from './components/Home.jsx';
+import Home from './components/Home components/Home.jsx';
 
-import Apps from './components/Apps.jsx';
-import Installation from './components/Installation.jsx';
+import Apps from './components/Apps components/Apps.jsx';
+import Installation from './components/Installation components/Installation.jsx';
+import { Component } from 'react';
+import PageEror from './components/Errors Pages/PageEror.jsx';
 
 const router = createBrowserRouter([
   {
@@ -24,7 +26,7 @@ const router = createBrowserRouter([
       { path: "/installation", Component: Installation },
       { path: "/github" ,Component:Apps  },
     ],
-    errorElement: <div> 404 not found </div>
+    errorElement: <PageEror />
   },
   
 ]);
