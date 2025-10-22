@@ -10,8 +10,8 @@ const Navber = () => {
         window.open("https://github.com/nayeem-94", "_blank"); // change URL to your GitHub
     };
     return (
-        <div className="">
-            <div className="navbar bg-base-100 shadow-sm">
+        <div className="container mx-auto">
+            <div className="navbar bg-base-100 shadow-sm container mx-auto">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
