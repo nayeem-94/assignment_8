@@ -18,6 +18,7 @@ const PageEror = () => {
                     Go Back!
                 </button>
             </NavLink>
+            
         </div>
     );
 };
