@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { use } from 'react';
 import Webuildtext from './Webuildtext';
+import Appspage from './Appspage';
 
-const Home = () => {
+const Home = ({fetchData}) => {
+    const data = use(fetchData);
+    // console.log(data);
     return (
         <>
-        {/* <button className='btn'>i am home</button> */}
+        <div className='bg-gray-100'>
+
         <Webuildtext ></Webuildtext>
+        <Appspage data={data}></Appspage>
+        </div>
         
         
         </>

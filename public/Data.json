@@ -1,0 +1,146 @@
+[
+  {
+    "image": "https://i.postimg.cc/ht6QrsXW/demo-app-1.webp",
+    "title": "NovaChat - Smart AI Messenger",
+    "companyName": "Orion Labs",
+    "id": 1,
+    "description": "A smart chat app with AI-powered message suggestions and privacy-focused encryption.",
+    "size": 42,
+    "reviews": 1290,
+    "ratingAvg": 4.5,
+    "downloads": 500000,
+    "ratings": [
+      { "name": "1 star", "count": 50 },
+      { "name": "2 star", "count": 80 },
+      { "name": "3 star", "count": 140 },
+      { "name": "4 star", "count": 400 },
+      { "name": "5 star", "count": 620 }
+    ]
+  },
+  {
+    "image": "https://i.postimg.cc/2Ss3v5tC/demo-app-2.webp",
+    "title": "FitTrack Pro - Fitness & Health Tracker",
+    "companyName": "ActiveX Inc.",
+    "id": 2,
+    "description": "Your personal fitness tracker with AI-based health insights and calorie tracking.",
+    "size": 58,
+    "reviews": 920,
+    "ratingAvg": 4.3,
+    "downloads": 350000,
+    "ratings": [
+      { "name": "1 star", "count": 60 },
+      { "name": "2 star", "count": 100 },
+      { "name": "3 star", "count": 180 },
+      { "name": "4 star", "count": 300 },
+      { "name": "5 star", "count": 280 }
+    ]
+  },
+  {
+    "image": "https://i.postimg.cc/02L9XB0m/demo-app-3.webp",
+    "title": "NoteFlow - Idea & Task Organizer",
+    "companyName": "MindSpace",
+    "id": 3,
+    "description": "Organize your ideas, notes, and tasks seamlessly across all your devices.",
+    "size": 25,
+    "reviews": 740,
+    "ratingAvg": 4.6,
+    "downloads": 420000,
+    "ratings": [
+      { "name": "1 star", "count": 30 },
+      { "name": "2 star", "count": 60 },
+      { "name": "3 star", "count": 110 },
+      { "name": "4 star", "count": 240 },
+      { "name": "5 star", "count": 300 }
+    ]
+  },
+  {
+    "image": "https://i.postimg.cc/yxM2jwCS/demo-app-4.webp",
+    "title": "Travelio - Smart Travel Companion",
+    "companyName": "GlobalGo",
+    "id": 4,
+    "description": "Discover new destinations, plan trips, and find the best flight and hotel deals.",
+    "size": 67,
+    "reviews": 1600,
+    "ratingAvg": 4.2,
+    "downloads": 800000,
+    "ratings": [
+      { "name": "1 star", "count": 100 },
+      { "name": "2 star", "count": 150 },
+      { "name": "3 star", "count": 250 },
+      { "name": "4 star", "count": 500 },
+      { "name": "5 star", "count": 600 }
+    ]
+  },
+  {
+    "image": "https://i.postimg.cc/yxM2jwCS/demo-app-4.webp",
+    "title": "SoundBurst - Music Streaming",
+    "companyName": "EchoWave Studio",
+    "id": 5,
+    "description": "Stream high-quality music, create playlists, and share songs with your friends.",
+    "size": 89,
+    "reviews": 3100,
+    "ratingAvg": 4.7,
+    "downloads": 1500000,
+    "ratings": [
+      { "name": "1 star", "count": 120 },
+      { "name": "2 star", "count": 180 },
+      { "name": "3 star", "count": 340 },
+      { "name": "4 star", "count": 900 },
+      { "name": "5 star", "count": 1560 }
+    ]
+  },
+  {
+    "image": "https://i.postimg.cc/yxM2jwCS/demo-app-4.webp",
+    "title": "PhotoCraft - AI Photo Editor",
+    "companyName": "PixelForge",
+    "id": 6,
+    "description": "Edit photos like a pro with AI filters, background remover, and color enhancer.",
+    "size": 76,
+    "reviews": 2050,
+    "ratingAvg": 4.4,
+    "downloads": 700000,
+    "ratings": [
+      { "name": "1 star", "count": 150 },
+      { "name": "2 star", "count": 200 },
+      { "name": "3 star", "count": 300 },
+      { "name": "4 star", "count": 600 },
+      { "name": "5 star", "count": 800 }
+    ]
+  },
+  {
+    "image": "https://i.postimg.cc/85JSbdfd/demo-app-6.webp",
+    "title": "BudgetMate - Expense Tracker",
+    "companyName": "FinEase",
+    "id": 7,
+    "description": "Track expenses, set budgets, and visualize your financial habits easily.",
+    "size": 31,
+    "reviews": 680,
+    "ratingAvg": 4.1,
+    "downloads": 280000,
+    "ratings": [
+      { "name": "1 star", "count": 90 },
+      { "name": "2 star", "count": 110 },
+      { "name": "3 star", "count": 160 },
+      { "name": "4 star", "count": 200 },
+      { "name": "5 star", "count": 120 }
+    ]
+  },
+  {
+    "image": "https://i.postimg.cc/85JSbdfd/demo-app-6.webp",
+    "title": "StudyPal - AI Learning Assistant",
+    "companyName": "EduSpark",
+    "id": 8,
+    "description": "Interactive learning app offering quizzes, study plans, and AI progress tracking.",
+    "size": 52,
+    "reviews": 1240,
+    "ratingAvg": 4.6,
+    "downloads": 900000,
+    "ratings": [
+      { "name": "1 star", "count": 70 },
+      { "name": "2 star", "count": 100 },
+      { "name": "3 star", "count": 200 },
+      { "name": "4 star", "count": 350 },
+      { "name": "5 star", "count": 520 }
+    ]
+  }
+]

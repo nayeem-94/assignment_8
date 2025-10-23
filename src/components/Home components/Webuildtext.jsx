@@ -17,7 +17,7 @@ const Webuildtext = () => {
         <>
         
 
-            <div className='flex flex-col justify-center items-center container mx-auto mt-5 '>
+            <div className='flex flex-col justify-center items-center container mx-auto py-10 '>
                 <h1 className=' text-4xl md:text-6xl font-bold '>
                     We build <br />
                 </h1>

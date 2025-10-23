@@ -7,11 +7,11 @@ import Logo from "../assets/logo.png";
 const Navber = () => {
 
     const handleClick = () => {
-        window.open("https://github.com/nayeem-94", "_blank"); // change URL to your GitHub
+        window.open("https://github.com/nayeem-94", "_blank"); 
     };
     return (
         <div className="container mx-auto">
-            <div className="navbar bg-base-100 shadow-sm container mx-auto">
+            <div className="navbar bg-base-100  container mx-auto">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -30,7 +30,8 @@ const Navber = () => {
                                 }
                             >
                                 Home
-                            </NavLink></li>
+                            </NavLink>
+                            </li>
                             <li>
                                 <NavLink
                                     to="/apps"
@@ -58,9 +59,9 @@ const Navber = () => {
 
                     </div>
 
-                    <Link to="/home" className={({ isActive }) =>
+                    <NavLink to="/home" className={({ isActive }) =>
                     (isActive
-                        ? "text-transparent bg-clip-text bg-gradient-to-r from-[#632ee3] to-[#9f62f2] underline decoration-[#632ee3] underline-offset-5"
+                        ? "text-transparent bg-clip-text bg-gradient-to-r from-[#632ee3] to-[#9f62f2]  decoration-[#632ee3] underline-offset-5"
                         : "")
                     }>
 
@@ -69,7 +70,7 @@ const Navber = () => {
                             <span className='text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#632ee3] to-[#9f62f2]'>HERO.IO</span>
 
                         </div>
-                    </Link>
+                    </NavLink>
                 </div>
                 <div className="navbar-center hidden lg:flex gap-4">
 

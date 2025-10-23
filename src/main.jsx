@@ -1,3 +1,4 @@
+
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
@@ -8,8 +9,20 @@ import Home from './components/Home components/Home.jsx';
 
 import Apps from './components/Apps components/Apps.jsx';
 import Installation from './components/Installation components/Installation.jsx';
-import { Component } from 'react';
+import { Component, Suspense } from 'react';
 import PageEror from './components/Errors Pages/PageEror.jsx';
+
+
+
+const fetchData = async () => {
+  const response = await fetch('/Data.json');
+  const data = await response.json();
+  return data;
+}
+
+// console.log(fetchData());
+
+
 
 const router = createBrowserRouter([
   {
@@ -18,17 +31,26 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/", Component: Home,
+        // element:
+          // <Suspense fallback={<div>Loading...</div>}>
+          //   <Home fetchData={fetchData()} />
+          // </Suspense>
       },
       {
-        path: "/home", Component: Home
+        path: "/home",
+        //  Component: Home,
+        element:
+          <Suspense fallback={<div>Loading...</div>}>
+            <Home fetchData={fetchData()} />
+          </Suspense>
       },
-      { path: "/apps", Component:Apps },
+      { path: "/apps", Component: Apps },
       { path: "/installation", Component: Installation },
-      { path: "/github" ,Component:Apps  },
+      { path: "/github", Component: Apps },
     ],
     errorElement: <PageEror />
   },
-  
+
 ]);
 
 
