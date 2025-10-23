@@ -72,14 +72,14 @@ const Navber = () => {
                         </div>
                     </NavLink>
                 </div>
-                <div className="navbar-center hidden lg:flex gap-4">
+                <div className="navbar-center hidden lg:flex gap-8 text-lg">
 
                     <NavLink
                         to="/home"
                         className={({ isActive }) =>
                             (isActive
                                 ? "text-transparent bg-clip-text bg-gradient-to-r from-[#632ee3] to-[#9f62f2] underline decoration-[#632ee3] underline-offset-5"
-                                : "") + " font-semibold"
+                                : "") + " font-semibold hover:scale-120 duration-500"
                         }
                     >
                         Home
@@ -89,7 +89,7 @@ const Navber = () => {
                         className={({ isActive }) =>
                             (isActive
                                 ? "text-transparent bg-clip-text bg-gradient-to-r from-[#632ee3] to-[#9f62f2] underline decoration-[#632ee3] underline-offset-7"
-                                : "") + " font-semibold"
+                                : "") + " font-semibold hover:scale-120 duration-500"
                         }
                     >
                         Apps
@@ -99,7 +99,7 @@ const Navber = () => {
                         className={({ isActive }) =>
                             (isActive
                                 ? "text-transparent bg-clip-text bg-gradient-to-r from-[#632ee3] to-[#9f62f2] underline decoration-[#632ee3] underline-offset-5"
-                                : "") + " font-semibold"
+                                : "") + " font-semibold hover:scale-120 duration-500"
                         }
                     >
                         Installation
@@ -108,8 +108,8 @@ const Navber = () => {
 
 
                 </div>
-                <div className="navbar-end">
-                    <button onClick={handleClick} className='btn text-lg font-semibold text-sm text-white bg-gradient-to-r from-[#632ee3] to-[#9f62f2]'>
+                <div className="navbar-end ">
+                    <button onClick={handleClick} className='btn hover:scale-105 duration-300 text-lg font-semibold text-sm text-white bg-gradient-to-r from-[#632ee3] to-[#9f62f2]'>
                         <img src={githubLogo} alt="GitHub" className="w-6 h-6 invert text-white" />
                         Contribute
                     </button>

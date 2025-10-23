@@ -29,11 +29,11 @@ const Webuildtext = () => {
                 <p className='text-gray-500 md:text-lg pl-5 md:p-0'> Our goal is to turn your ideas into digital experiences that truly make an impact.</p>
 
                 <div onClick={handleClick1} className='flex flex-1 gap-6 mt-9  mb-10  '>
-                    <div className='flex btn  cursor-pointer rounded-lg h-12'>
+                    <div className='flex btn hover:scale-112 duration-900 cursor-pointer rounded-lg h-12'>
                         <img className='w-14' src={playstore} alt="" />
                         <button className=' cursor-pointer text-lg'>Google Play</button>
                     </div>
-                    <div onClick={handleClick2} className='flex gap-5 btn  cursor-pointer h-12 rounded-lg'>
+                    <div onClick={handleClick2} className='flex gap-5 btn hover:scale-112 duration-300  cursor-pointer h-12 rounded-lg'>
                         <img className='w-7' src={appstore} alt="" />
                         <button className='text-lg cursor-pointer'>App Store</button>
                     </div>

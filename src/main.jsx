@@ -11,6 +11,7 @@ import Apps from './components/Apps components/Apps.jsx';
 import Installation from './components/Installation components/Installation.jsx';
 import { Component, Suspense } from 'react';
 import PageEror from './components/Errors Pages/PageEror.jsx';
+import Detailapp from './components/Apps components/Detailapp.jsx';
 
 
 
@@ -30,11 +31,11 @@ const router = createBrowserRouter([
     Component: App,
     children: [
       {
-        path: "/", Component: Home,
-        // element:
-          // <Suspense fallback={<div>Loading...</div>}>
-          //   <Home fetchData={fetchData()} />
-          // </Suspense>
+        path: "/", //Component: Home,
+        element:
+          <Suspense fallback={<div>Loading...</div>}>
+            <Home fetchData={fetchData()} />
+          </Suspense>
       },
       {
         path: "/home",
@@ -44,6 +45,22 @@ const router = createBrowserRouter([
             <Home fetchData={fetchData()} />
           </Suspense>
       },
+      
+      {
+        path: "/home/:id",
+        element: (
+          <Suspense fallback={<div>Loading...</div>}>
+            <Detailapp />
+          </Suspense>
+        ),
+        loader: async ({ params }) => {
+          const res = await fetch("/Data.json");
+          const data = await res.json();
+          return data.find((d) => d.id === parseInt(params.id));
+        }
+
+      },
+
       { path: "/apps", Component: Apps },
       { path: "/installation", Component: Installation },
       { path: "/github", Component: Apps },
