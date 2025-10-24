@@ -18,9 +18,11 @@ const Detailapp = () => {
     return (
         <div className=' bg-gray-100'>
             <div className='container mx-auto py-15'>
+
                 <div className='flex flex-col gap-8  md:flex-row'>
-                    <div className='w-3/8'>
-                        <img src={app.image} alt={app.title} className='h-full ' />
+
+                    <div className='md:w-3/8 flex justify-center items-center'>
+                        <img src={app.image} alt={app.title} className='h-full p-5 md:p-0  ' />
                     </div>
                     <div className='w-full p-5 flex flex-col gap-1'>
                         <div className='font-bold text-2xl'>{app.title}</div>
@@ -29,7 +31,7 @@ const Detailapp = () => {
                             <span className=' font-semibold text-transparent  bg-clip-text bg-gradient-to-r from-[#632ee3] to-[#9f62f2]'> {app.companyName} </span>
                         </div>
                         <hr className="my-8 w-full border-gray-300" />
-                        <div className='flex gap-25' >
+                        <div className='flex gap-12 md:gap-25' >
                             <div className='flex flex-col gap-1'>
                                 <img src={download} alt="" className='w-8' />
                                 <p className='text-sm'>Downloads</p>
@@ -59,8 +61,8 @@ const Detailapp = () => {
 
                 <hr className="my-8 w-full border-gray-300" />
 
-                <div>
-                    <h2 className='font-bold text-xl'>Rating Distribution</h2>
+                <div className='p-5'>
+                    <h2 className='font-bold text-xl '>Rating Distribution</h2>
                     <Graph data={ratingData} ></Graph>
                 </div>
 
