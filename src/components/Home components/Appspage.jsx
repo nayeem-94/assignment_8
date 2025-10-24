@@ -1,5 +1,7 @@
 import React from 'react';
 import Appcart from './Appcart';
+import { NavLink } from 'react-router';
+
 
 const Appspage = ({ data }) => {
     console.log("data", data);
@@ -16,9 +18,11 @@ const Appspage = ({ data }) => {
                         <Appcart key={app.id} app={app} />
                     ))}
                 </div>
-                <div className='flex justify-center items-center cursor-pointer py-10 '>
-                    <button className='bg-gradient-to-r cursor-pointer from-[#632ee3] text-xl hover:scale-105 duration-300 to-[#9f62f2] text-white font-semibold py-2 px-8 rounded'>Show All</button>
-                </div>
+                <NavLink to="/apps">
+                    <div className='flex justify-center items-center cursor-pointer py-10 '>
+                        <button className='bg-gradient-to-r cursor-pointer from-[#632ee3] text-xl hover:scale-105 duration-300 to-[#9f62f2] text-white font-semibold py-2 px-8 rounded'>Show All</button>
+                    </div>
+                </NavLink>
 
             </div>
 

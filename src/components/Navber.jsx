@@ -50,7 +50,7 @@ const Navber = () => {
                                 className={({ isActive }) =>
                                     (isActive
                                         ? "text-transparent bg-clip-text bg-gradient-to-r from-[#632ee3] to-[#9f62f2] underline decoration-[#632ee3] underline-offset-5"
-                                        : "") + " font-semibold"
+                                        : "") + " font-semibold "
                                 }
                             >
                                 Installation

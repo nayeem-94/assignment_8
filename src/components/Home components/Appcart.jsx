@@ -1,7 +1,7 @@
 import React from 'react';
+import { NavLink } from 'react-router';
 import download from "../../assets/icon-downloads.png"
 import rating from "../../assets/icon-ratings.png"
-import { NavLink } from 'react-router';
 
 
 
