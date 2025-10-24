@@ -45,7 +45,7 @@ const router = createBrowserRouter([
             <Home fetchData={fetchData()} />
           </Suspense>
       },
-      
+
       {
         path: "/home/:id",
         element: (
@@ -61,9 +61,14 @@ const router = createBrowserRouter([
 
       },
 
-      { path: "/apps", Component: Apps },
+      {
+        path: "/apps", //Component: Apps
+        element:
+          <Suspense fallback={<div>Loading...</div>}>
+            <Apps fetchData={fetchData()} />
+          </Suspense>
+      },
       { path: "/installation", Component: Installation },
-      { path: "/github", Component: Apps },
     ],
     errorElement: <PageEror />
   },

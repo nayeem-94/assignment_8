@@ -62,9 +62,16 @@ const Detailapp = () => {
                 <hr className="my-8 w-full border-gray-300" />
 
                 <div className='p-5'>
-                    <h2 className='font-bold text-xl '>Rating Distribution</h2>
+                    <h2 className='font-bold text-xl '>Ratings </h2>
                     <Graph data={ratingData} ></Graph>
                 </div>
+
+                <hr className="my-8 w-full border-gray-300" />
+                <div className='p-5'>
+                    <h1 className='text-xl font-bold'>Description</h1>
+                    <p className='text-sm text-gray-500 pt-6'>{app.description}</p>
+                </div>
+
 
             </div>
         </div>
