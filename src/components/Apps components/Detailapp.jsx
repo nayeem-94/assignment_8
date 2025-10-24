@@ -1,18 +1,36 @@
-import React from 'react';
-import { Link, NavLink, useLoaderData } from 'react-router';
-import download from "../../assets/icon-downloads.png"
-import rating from "../../assets/icon-ratings.png"
-import review from "../../assets/icon-review.png"
+import React, { useEffect, useState } from 'react';
+import { useLoaderData } from 'react-router';
+import download from "../../assets/icon-downloads.png";
+import rating from "../../assets/icon-ratings.png";
+import review from "../../assets/icon-review.png";
 import Graph from './Graph';
 
 const Detailapp = () => {
     const app = useLoaderData();
-
+    const [isInstalled, setIsInstalled] = useState(false);
     const ratingData = Object.entries(app.ratings).map(([key, value]) => ({
         name: key,
         count: value
     }));
 
+    // 🧠 Check if app already installed
+    useEffect(() => {
+        const stored = JSON.parse(localStorage.getItem("installedApps")) || [];
+        const found = stored.some((a) => a.id === app.id);
+        setIsInstalled(found);
+    }, [app.id]);
+
+    // ⚙️ Handle Install Click
+    const handleInstall = () => {
+        const stored = JSON.parse(localStorage.getItem("installedApps")) || [];
+        const alreadyInstalled = stored.find((a) => a.id === app.id);
+
+        if (!alreadyInstalled) {
+            stored.push(app);
+            localStorage.setItem("installedApps", JSON.stringify(stored));
+            setIsInstalled(true);
+        }
+    };
 
 
     return (
@@ -48,11 +66,17 @@ const Detailapp = () => {
                                 <h1 className='font-bold text-2xl'>{app.reviews}</h1>
                             </div>
                         </div>
-                        <div className='mt-7 cursor-pointer hover:scale-103 duration-400' >
-                            <span className='bg-[#00d390] text-white p-2 rounded-sm font-semibold'>
-                                Install Now ({app.size} MB)
-                            </span>
-
+                        <div className="mt-7 cursor-pointer hover:scale-103 duration-400">
+                            <button
+                                onClick={handleInstall}
+                                disabled={isInstalled}
+                                className={`px-4 py-2 rounded-md  font-semibold text-white transition-all ${isInstalled
+                                    ? "bg-gray-400 cursor-not-allowed"
+                                    : "bg-[#00d390] hover:bg-[#00b57c] cursor-pointer"
+                                    }`}
+                            >
+                                {isInstalled ? "Installed" : `Install Now (${app.size} MB)` }
+                            </button>
                         </div>
 
                     </div>
