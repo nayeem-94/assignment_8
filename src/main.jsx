@@ -33,7 +33,7 @@ const router = createBrowserRouter([
       {
         path: "/", //Component: Home,
         element:
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<span className="loading flex justify-center items-center loading-spinner loading-lg"></span>}>
             <Home fetchData={fetchData()} />
           </Suspense>
       },
@@ -41,7 +41,7 @@ const router = createBrowserRouter([
         path: "/home",
         //  Component: Home,
         element:
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<span className="loading loading-spinner loading-lg"></span>}>
             <Home fetchData={fetchData()} />
           </Suspense>
       },
@@ -49,7 +49,7 @@ const router = createBrowserRouter([
       {
         path: "/home/:id",
         element: (
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<span className="loading loading-spinner loading-lg"></span>}>
             <Detailapp />
           </Suspense>
         ),
@@ -64,7 +64,7 @@ const router = createBrowserRouter([
       {
         path: "/apps", //Component: Apps
         element:
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<span className="loading loading-spinner loading-lg"></span>}>
             <Apps fetchData={fetchData()} />
           </Suspense>
       },

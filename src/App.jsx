@@ -6,7 +6,7 @@ const App = () => {
   return (
     <>
       {/* <div>i am app</div> */}
-      <div className="mx-auto">
+      <div className="mx-auto bg-gray-100">
 
         <Navber></Navber>
         <Outlet>
